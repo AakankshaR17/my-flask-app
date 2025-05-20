@@ -16,7 +16,6 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_fail_case(self):
         response = self.client.get('/add/2/2')
-        self.assertEqual(response.data.decode(), "5")  # ❌ Intentionally fail
-
+self.assertEqual(response.data.decode(), "5 ")  # ❌ Add a space or comment change
 if __name__ == '__main__':
     unittest.main()
