@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
   - name: 'python'
     entrypoint: 'bash'
@@ -22,5 +25,6 @@ steps:
         '--region', 'us-central1',
         '--allow-unauthenticated'
       ]
+
 images:
   - 'gcr.io/$PROJECT_ID/my-flask-app'
