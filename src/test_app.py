@@ -12,11 +12,10 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_add(self):
         response = self.client.get('/add/2/3')
-        self.assertEqual(response.data.decode(), "5")  # adjust as needed
+        self.assertEqual(response.data.decode(), "5")  
 
     def test_fail_case(self):
         response = self.client.get('/add/2/2')
-        self.assertEqual(response.data.decode(), "4")  # ✅ this should now PASSSS
-
+        self.assertEqual(response.data.decode(), "4")  #
 if __name__ == '__main__':
     unittest.main()
